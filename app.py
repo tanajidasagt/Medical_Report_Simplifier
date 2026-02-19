@@ -1,3 +1,4 @@
+import streamlit as st
 from simplify import simplify_text
 from ner import extract_terms
 
@@ -7,22 +8,27 @@ medical_dict = {
     "glucose": "a type of sugar in the blood"
 }
 
-# Take user input
-text = input("Enter medical report:\n")
+st.set_page_config(page_title="Medical Report Simplifier")
 
-print("\n--- Original Report ---")
-print(text)
+st.title("🏥 Patient-Centric Medical Report Simplifier")
 
-print("\n--- Simplified Report ---")
-simplified = simplify_text(text)
-print(simplified)
+text = st.text_area("Enter Medical Report:", height=200)
 
-print("\n--- Medical Term Explanations ---")
-terms = extract_terms(text)
+if st.button("Simplify Report"):
 
-if not terms:
-    print("No medical terms detected.")
-else:
-    for term, label in terms:
-        explanation = medical_dict.get(term.lower(), "No simple explanation available")
-        print(f"{term} → {explanation}")
+    if text.strip() == "":
+        st.warning("Please enter some medical text.")
+    else:
+        st.subheader("Simplified Report")
+        simplified = simplify_text(text)
+        st.success(simplified)
+
+        st.subheader("Medical Term Explanations")
+        terms = extract_terms(text)
+
+        if not terms:
+            st.write("No medical terms detected.")
+        else:
+            for term, label in terms:
+                explanation = medical_dict.get(term.lower(), "No simple explanation available")
+                st.write(f"**{term}** → {explanation}")

@@ -1,6 +1,6 @@
 import spacy
 
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_sci_sm")
 
 def extract_terms(text):
     doc = nlp(text)
