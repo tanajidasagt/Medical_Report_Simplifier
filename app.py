@@ -1,34 +1,50 @@
 import streamlit as st
 from simplify import simplify_text
+from simplify import simplify_text
 from ner import extract_terms
+from deep_translator import GoogleTranslator
 from src.ocr_engine import extract_text_from_image
 
-# --- Data Dictionaries ---
-medical_dict = {
-    "hypertension": "high blood pressure",
-    "diabetes": "a condition where blood sugar levels are too high",
-    "glucose": "a type of sugar in the blood",
-    "fever": "an increase in body temperature",
-    "infection": "when harmful microorganisms enter the body",
-    "cancer": "uncontrolled growth of abnormal cells",
-    "cholesterol": "a fatty substance in the blood",
-    "asthma": "a condition that affects breathing",
-    "anemia": "low red blood cells causing weakness",
-    "obesity": "excess body fat that may affect health"
-}
 
-advice_dict = {
-    "hypertension": ["Reduce salt intake", "Exercise regularly", "Manage stress"],
-    "diabetes": ["Maintain a low sugar diet", "Exercise regularly", "Monitor blood sugar levels"],
-    "glucose": ["Maintain a balanced diet", "Avoid excessive sugar intake", "Monitor blood sugar levels"],
-    "fever": ["Stay hydrated", "Take proper rest", "Consult a doctor if it persists"],
-    "infection": ["Maintain proper hygiene", "Wash hands regularly", "Avoid contaminated food and water"],
-    "cancer": ["Follow regular medical checkups", "Avoid tobacco and alcohol", "Maintain a healthy lifestyle"],
-    "cholesterol": ["Avoid fatty and fried foods", "Exercise regularly", "Eat more fruits and vegetables"],
-    "asthma": ["Avoid dust and pollution", "Practice breathing exercises", "Use inhalers if prescribed"],
-    "anemia": ["Consume iron-rich foods", "Maintain a nutritious diet", "Consult a doctor if needed"],
-    "obesity": ["Maintain a balanced diet", "Exercise regularly", "Avoid junk food"]
-}
+def translate_text(text, target_lang):
+    return GoogleTranslator(
+        source='auto',
+        target=target_lang
+    ).translate(text)
+
+
+description_df = pd.read_csv("symptom_Description.csv")
+
+precaution_df = pd.read_csv("symptom_precaution.csv")
+
+medical_dict = dict(
+    zip(
+        description_df["Disease"].str.lower(),
+        description_df["Description"]
+    )
+)
+
+advice_dict = {}
+
+for _, row in precaution_df.iterrows():
+
+    disease = row["Disease"].lower()
+
+precautions = [
+
+    str(p).strip()
+
+    for p in [
+        row["Precaution_1"],
+        row["Precaution_2"],
+        row["Precaution_3"],
+        row["Precaution_4"]
+    ]
+
+    if pd.notna(p)
+]
+
+advice_dict[disease] = precautions
 
 default_advice = [
     "Maintain a healthy lifestyle",
@@ -36,6 +52,12 @@ default_advice = [
     "Eat a balanced diet",
     "Consult a doctor if needed"
 ]
+
+st.set_page_config(
+    page_title="Medical Report Simplifier"
+)
+
+
 
 # --- Page Config ---
 st.set_page_config(page_title="Medical Report Simplifier")
