@@ -40,3 +40,65 @@ Pneumonia,consult doctor,medication,rest,follow up
 Arthritis,exercise,use hot and cold therapy,try acupuncture,massage
 Gastroenteritis,stop eating solid food for while,try taking small sips of water,rest,ease back into eating
 Tuberculosis,cover mouth,consult doctor,medication,rest
+Common Cold,drink vitamin c rich drinks,take vapour,avoid cold food,keep fever in check
+Typhus,consult doctor,medication,rest,follow up
+Angina Pectoris,rest,stop activity,use nitroglycerin if prescribed,consult doctor
+Arrhythmia,avoid caffeine,monitor pulse,reduce stress,consult doctor
+Atherosclerosis,eat healthy,exercise,quit smoking,monitor cholesterol
+Bronchitis,drink fluids,use humidifier,rest,avoid smoke
+COPD,quit smoking,use inhalers,avoid pollutants,breathing exercises
+Cirrhosis,stop alcohol,low salt diet,eat healthy,consult doctor
+Dementia,keep routine,safe environment,mental exercise,support group
+Emphysema,quit smoking,breathing exercises,avoid cold air,oxygen therapy
+Epilepsy,avoid triggers,take meds regularly,get enough sleep,safety first
+Hematoma,ice pack,elevate area,rest,monitor for swelling
+Ischemia,seek medical help,rest,follow treatment plan,monitor symptoms
+Leukemia,regular checkups,avoid infections,healthy diet,rest
+Meningitis,seek immediate hospital,vaccination,stay hydrated,rest
+Osteoporosis,calcium intake,vitamin d,weight bearing exercise,prevent falls
+Pancreatitis,stop alcohol,low fat diet,stay hydrated,rest
+Renal Failure,limit salt and protein,monitor fluid intake,follow dialysis if needed,consult doctor
+Stroke,call ambulance,note time of onset,keep calm,do not give food or drink
+Syncope,lie down,raise legs,stay hydrated,consult doctor
+Lethargy,rest,stay hydrated,get proper sleep,consult doctor if persistent
+Pruritus,use moisturizer,avoid scratching,cool bath,anti itch cream
+Erythema,avoid sun,use soothing lotions,cool compress,consult doctor
+Cyanosis,seek oxygen,stay warm,seek immediate medical help,monitor pulse
+Benign,monitor growth,regular checkups,follow doctor advice,stay calm
+Malignant,follow oncology plan,healthy diet,rest,emotional support
+Metastasis,follow treatment,pain management,palliative care,consult specialist
+Prognosis,follow up,healthy lifestyle,stay positive,follow treatment
+Asymptomatic,regular screening,stay healthy,monitor changes,follow up
+Acute,seek immediate care,rest,follow treatment,stay hydrated
+Chronic,long term management,regular checkups,stay active,follow up
+Lesion,keep area clean,dont pick at it,monitor changes,consult doctor
+Biopsy,keep site clean,follow wound care,rest,monitor for infection
+Edema,reduce salt,elevate limbs,stay active,use compression
+Atrophy,physical therapy,exercise,healthy diet,consult doctor
+Hypertrophy,monitor heart or muscle,moderate exercise,consult doctor,follow treatment
+Hypoxia,seek oxygen,stay upright,keep airway clear,seek medical help
+Inflammation,ice pack,rest,anti inflammatory diet,consult doctor
+Anorexia,seek nutritional help,eat small meals,therapy,consult doctor
+Vertigo,lie down,move slowly,avoid bright lights,consult doctor
+Palpitation,avoid caffeine,deep breathing,relax,consult doctor
+Aneurysm,control blood pressure,avoid heavy lifting,quit smoking,regular checkups
+Gout,avoid high purine food,stay hydrated,use ice packs,consult doctor
+Scoliosis,exercise,physical therapy,wear brace if prescribed,consult doctor
+Gastritis,avoid spicy food,small frequent meals,avoid alcohol,antacids
+Eczema,moisturize,avoid harsh soap,wear cotton,avoid triggers
+Anxiety,deep breathing,meditation,regular exercise,therapy
+Depression,seek therapy,stay connected,regular exercise,follow treatment
+Hernia,avoid heavy lifting,healthy weight,use support belt,consult doctor
+Sepsis,immediate hospital,antibiotics,stay hydrated,monitor vitals
+Insomnia,regular sleep schedule,no caffeine at night,relax before bed,dark room
+Hyperextension,rest,ice pack,use brace,physical therapy
+myocardial infarction,call emergency,don't move,loosen clothing,take prescribed meds
+hyperglycemia,check insulin,drink water,exercise,monitor sugar
+cephalalgia,rest in dark room,hydrate,avoid stress,consult doctor
+pyrexia,hydrate,rest,cool compress,monitor temperature
+edema,reduce salt,elevate limbs,stay active,use compression
+tachycardia,relax,avoid caffeine,deep breathing,consult doctor
+bradycardia,rest,avoid strain,monitor pulse,consult doctor
+dyspnea,rest,stay upright,avoid smoke,seek oxygen if severe
+neoplasm,follow oncology plan,regular checkups,healthy diet,rest
+idiopathic,monitor symptoms,regular checkups,stay healthy,follow up
